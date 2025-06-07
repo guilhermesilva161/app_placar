@@ -7,6 +7,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import com.example.placareletronico.databinding.ActivityResultBinding;
 
 public class ResultActivity extends AppCompatActivity {
@@ -72,6 +74,7 @@ public class ResultActivity extends AppCompatActivity {
             tv.setText(teamL + " " + scoreL + " x " + scoreR + " " + teamR);
             tv.setTextSize(16);
             tv.setPadding(0, 8, 0, 8);
+            tv.setTextColor(ContextCompat.getColor(this, R.color.white));
             container.addView(tv);
         }
 

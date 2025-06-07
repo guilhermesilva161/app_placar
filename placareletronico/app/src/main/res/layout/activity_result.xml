@@ -5,41 +5,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:padding="24dp">
 
     <TextView
         android:id="@+id/tvWinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:gravity="center"
         android:text="Vencedor: "
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvFinalScore"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Placar Final:"
-        android:textSize="24sp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvWinner"
+        android:text="Placar Final:"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvWinner" />
 
     <ScrollView
         android:id="@+id/scrollHistory"
         android:layout_width="347dp"
         android:layout_height="448dp"
         android:layout_marginTop="24dp"
+        android:forceDarkAllowed="false"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFinalScore">
+        app:layout_constraintTop_toBottomOf="@id/tvFinalScore"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/historyContainer"
@@ -54,6 +63,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Limpar"
+        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/btnBack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -64,6 +74,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Nova Partida"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btnClearHistory" />
